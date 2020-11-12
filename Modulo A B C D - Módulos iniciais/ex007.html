@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 09 - DOM Documento Object Model</title>
+    <style>
+        body {
+            background: burlywood;
+            font: 100;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo a Manipular o DOM - Document Object Model</h1>
+    <p>Vamos aprender a fazer a Árvore DOM do meu site.</p>
+    <hr>
+    <p>A janela do navegador é um objetio chamado window...</p>
+    <p>Temos o objeto location, o documento, o history, e muitos outros objetos.</p>
+    <p id="palagrafo3"> Dentro do documento temos o objeto HTML e seus filhos, head e body.</p>
+    
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p3 = window.document.getElementById("palagrafo3")
+        p1.style.color = "blue"
+        p1.innerText = "Olarrr abiguinhos, por aqui dá de manipular o texto!"
+        p3.innerText = "tutu beim?"
+    
+    
+    </script>
+
+    <p>Vamos aprender 5 métodos de acesso aos elementos da árvore DOM, e podemos selecionar estes elementos pra poder navegar.</p>
+    <p>Podemos acessar:</p>
+    <p>Por marca</p>
+    <p>Por ID</p>
+    <p>Por Nome</p>
+    <p>Por Classe</p>
+    <p>Por Seletor</p>
+
+    <h1>Por Marca - getElementsByTagName()</h1>
+
+    <p>Estas são as maneiras de selecionarmos elementos do documento html utilizando o código javascript, isto possibilita a integração destes elementos e a manipulação através do código Js.</p>
+    
+</body>
+</html>

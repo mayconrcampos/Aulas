@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisando Números</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onload="foco()">
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    
+    <section>
+        Número (entre 1 a 100)<input type="number" name="numero" id="numero">
+
+        <input type="button" value="Adicionar" onclick="adicionar()">
+
+        <select name="numeros" id="numeros" size="10" style="width: 500px;"></select>
+
+        <input type="button" value="Finalizar" id="finalizar" onclick="finalizar()">
+        <input type="button" value="Limpar" id="finalizar" onclick="limpar()">
+        
+    </section>
+    <section>
+        <h1 id="h1debaixo">Resultados da Análise</h1>
+        <div id="todo"></div>
+        <div id="maior"></div>
+        <div id="menor"></div>
+        <div id="soma"></div>
+        <div id="media"></div>
+    </section>
+
+    <footer>
+        <p>&copy; MCampos Software</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+
+    
+</body>
+</html>

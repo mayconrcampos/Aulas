@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - Condicionais Simples e Compostas</title>
+    <style>
+        body {
+            background: bisque;
+        }
+        div#res {
+            font: bold;
+            font-size: 32px;
+            background:brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <hr>
+    Velocidade do Carro <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <hr>
+    <div id="res"></div>
+
+    <script>
+        function calcular(){
+            var vel = window.document.getElementById
+            ("txtvel")
+            var res = window.document.getElementById("res")
+            var vel = Number(vel.value)
+
+            if(vel < 80){
+                res.innerText = `Você está dentro da velocidade permitida. ${vel}Km/h.`
+            }else if((vel >= 80)&& vel <= 110){
+                res.innerText = `Você está dentro do limite de velocidade. ${vel}Km/h.`
+            }else{
+                res.innerText = `Você está acima do limite de velocidade. Toma multa vagabundo! ${vel}Km/h.`
+            }
+        }
+        
+
+    </script>
+
+    
+</body>
+</html>

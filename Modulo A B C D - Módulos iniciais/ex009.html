@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais um exemplo de interatividade usando o DOM.</title>
+    <style>
+        p#meupe {
+            background: chartreuse;
+            font: black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        div#res {
+            color: darkslateblue;
+            font-size: larger;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interação com o usuário - Calculadora Simples</h1>
+    <hr>
+    <h2>Somando valores</h2>
+    <hr>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div>Resultado</div>
+    <div id="res"></div>
+
+    <script>
+        function somar(){
+            var caixa1 = window.document.getElementById("txtn1")
+            var caixa2 = window.document.querySelector("input#txtn2") //    Chamando o input de forma diferente. Mas funciona a mesma coisa.
+            var res = window.document.getElementById("res")
+            var num1 = Number(caixa1.value)
+            var num2 = Number(caixa2.value)
+            var soma = num1 + num2
+
+            res.innerText = `A soma entre ${caixa1.value} e ${caixa2.value} é igual a ${soma}.`
+
+        }
+    </script>
+    
+</body>
+</html>

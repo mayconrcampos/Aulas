@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Fácil v2</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Gerador de Tabuadas</h1>
+    </header>
+    
+    <section>
+        <div>Insira um número para gerar sua Tabuada</div>
+        Número: <input type="number" name="numero" id="numero">
+        <input type="button" value="Gerar Tabuada" onclick="gerar()">
+        <br>
+        <select name="tabuada" id="seltab" size="10" style="width: 500px;">
+            <option>Escolha o Número</option>
+        </select>
+        
+        <div id="mostra"></div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; MCampos Software</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+
+    
+</body>
+</html>

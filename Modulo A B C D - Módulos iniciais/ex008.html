@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - Eventos DOM</title>
+    <style>
+        div#area {
+            background: chartreuse;
+            font: black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">Div de exempĺo.</div>
+
+    <p>Nesta aula vamos ver sobre eventos que podemos tratar no DOM.</p>
+    <p>Vamos fazer um exemplo com uma div cujo id foi estabelecido como "area"... Vamos habilitar os seguintes eventos.</p>
+    <hr>
+    <p>mouseenter - Quando o mouse tocar em cima da div.</p>
+    <p>mousemove - Quando o mouse se mover por sobre a div.</p>
+    <p>mousedown - Quando houver o click sobre a div.</p>
+    <p>mouseup - Quando houver o soltar do click sobre a div.</p>
+    <p>click - Quando houver o apertar e soltar do botao do mouse rapidamente sobre a div... o click.</p>
+
+    <hr>
+
+    <p>No site https://developer.mozilla.org/pt-BR/docs/Web/Events existe um indice de referência com todos os eventos possíveis em JavaScript. Mas pra que servem estes eventos? É pra criar interatividade numa página... São os eventos que irão acionar funções ao clicarmos em alguma elemento da página.. Exemplo:</p>
+    <p>Ao clicar num botão, irá adicionar as informações de um formulário dentro do banco de dados. O evento chama a função que irá fazer isto.</p>
+
+    <script>
+        var area = window.document.getElementById("area")
+        area.addEventListener("click", clicar)
+        area.addEventListener("mouseenter", entrar)
+        area.addEventListener("mouseleave", sair)
+
+        function clicar(){
+            area.innerText = "Acabei de clicar na bagaça!!"
+            area.style.background = "red"
+        }
+        function entrar(){
+            area.innerText = "Mouse entrou!"
+            area.style.background = "blue"
+        }
+        function sair(){
+            area.innerText = "Mouse saiu da bagaça!"
+            area.style.background = "yellow"
+        }
+    </script>
+    
+</body>
+</html>

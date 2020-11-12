@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - Aprendendo a manipular variáveis</title>
+    <style>
+        body {
+            /*Comentário em CSS*/
+            background-color: darksalmon;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Nesta aula vamos aprender a manipular variáveis.</h1>
+    <!--Comentário em HTML5-->
+    <script>
+        // Comentário em JavaScript
+        // MAnipulação de tipos com
+        // ParseInt() - Força conversão de string para int
+        // ParseFloat() - Força conversão de string para float
+        // Number - Força conversão para qualquer number, o que for 
+        // mais conveniente ao momento.
+
+        // Podemos converter também numero para string.
+        // String(n)
+        // ToString(n)
+
+        var num1 = Number(window.prompt("Digite um numero"))
+        var num2 = Number(window.prompt("Digite outro numero"))
+        var soma = num1 + num2
+        window.alert("A soma entre  "+ num1 + " e "+ num2 +" é igual a "+ soma)
+        
+        // Template Strings
+        window.alert(`Que maravilha, deu ${soma}!!`)
+
+        // Funções length e toUpperCase
+        var nome = window.prompt("Digite seu nome")
+        window.alert(`Olá ${nome}, seu nome possui ${nome.length} letras`)
+        window.alert(`Assim fica seu nome tudo em maiúsculas: ${nome.toUpperCase()}`)
+        
+    </script>
+</body>
+</html>

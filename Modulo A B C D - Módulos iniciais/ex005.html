@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatar valores</title>
+</head>
+<body>
+    <h1>Nesta aula estamos vendo como usar a função toLocaleString para formatar valores conforme a região.</h1>
+    <hr>
+
+
+    <script>
+        var valor = window.prompt("Qual valor da bagaça?")
+        valor = valor.replace(",", ".")
+        valor = Number(valor)
+
+        var num = valor.toLocaleString('pt-BR', {style: 'currency',
+        currency: 'BRL'})
+        window.alert(`O valor é: ${num}`)
+
+
+        document.write(`Logo, você digitou o valor ${valor}, então o valor digitado foi tratado e transformado em moeda corrente brasileira pela função toLocaleString... Então ficou o seguinte: ${num}`)
+
+    </script>
+    
+    
+    
+</body>
+</html>

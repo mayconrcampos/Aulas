@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - 4 operações</title>
+</head>
+<body>
+    <h1>Calculadora das 4 operações</h1>
+    <hr>
+    <h2>Digite dois números e aperte no botão da operação correspondente.</h2>
+    <input type="number" name="num1" id="num1">
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="+" onclick="somar()">
+    <input type="button" value="-" onclick="subtrair()">
+    <input type="button" value="/" onclick="dividir()">
+    <input type="button" value="x" onclick="multiplicar()">
+    <hr>
+    <h2>Resultado</h2>
+    <p id="res"></p>
+
+    <script>
+        function somar(){  
+            var cx_num1 = window.document.getElementById("num1")
+            var cx_num2 = window.document.getElementById("num2")
+            var res = window.document.getElementById("res")
+            let num1 = Number(cx_num1.value)
+            let num2 = Number(cx_num2.value) 
+            var soma = num1 + num2
+            res.innerText = `A Soma de ${cx_num1.value} e ${cx_num2.value}  é igual a ${soma}.`
+        }
+        function subtrair(){
+            var cx_num1 = window.document.getElementById("num1")
+            var cx_num2 = window.document.getElementById("num2")
+            var res = window.document.getElementById("res")
+            var num1 = Number(cx_num1.value)
+            var num2 = Number(cx_num2.value) 
+            var subtracao = num1 - num2
+            res.innerText = `A Soma de ${cx_num1.value} e ${cx_num2.value}  é igual a ${subtracao}.`
+        }
+        function dividir(){
+            var cx_num1 = window.document.getElementById("num1")
+            var cx_num2 = window.document.getElementById("num2")
+            var res = window.document.getElementById("res")
+            var num1 = Number(cx_num1.value)
+            var num2 = Number(cx_num2.value) 
+            var dividir = num1 / num2
+            res.innerText = `A Soma de ${cx_num1.value} e ${cx_num2.value}  é igual a ${dividir.toFixed(2)}.`
+        }
+        function multiplicar(){
+            var cx_num1 = window.document.getElementById("num1")
+            var cx_num2 = window.document.getElementById("num2")
+            var res = window.document.getElementById("res")
+            var num1 = Number(cx_num1.value)
+            var num2 = Number(cx_num2.value) 
+            var multiplicar = num1 * num2
+            res.innerText = `A Soma de ${cx_num1.value} e ${cx_num2.value}  é igual a ${multiplicar}.`
+        }
+
+    </script>
+</body>
+</html>
